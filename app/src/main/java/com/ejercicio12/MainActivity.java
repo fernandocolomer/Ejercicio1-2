@@ -19,9 +19,9 @@ EditText editTNombre,editTApellido,editTEdad,editTCorreo;
         setContentView(R.layout.activity_main);
 
         editTNombre=(EditText) findViewById(R.id.txtnombre);
-        editTNombre=(EditText) findViewById(R.id.txtapellido);
-        editTNombre=(EditText) findViewById(R.id.txtedad);
-        editTNombre=(EditText) findViewById(R.id.txtcorreoelectronico);
+        editTApellido=(EditText) findViewById(R.id.txtapellido);
+        editTEdad=(EditText) findViewById(R.id.txtedad);
+        editTCorreo=(EditText) findViewById(R.id.txtcorreoelectronico);
 
         btnEnviar=(Button) findViewById(R.id.btnenviarinformacion);
         btnEnviar.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +34,12 @@ EditText editTNombre,editTApellido,editTEdad,editTCorreo;
                 datosPersona.setCorreo(editTCorreo.getText().toString());
 
                 //Codigo para el envio de datos ala otra ventana
-                Intent ventana2 = new Intent(getApplicationContext(),MainActivityResultado.class);
-                ventana2.putExtra("Pnombre",datosPersona.getNombre());
-                ventana2.putExtra("Papellido",datosPersona.getApellido());
-                ventana2.putExtra("Pedad",datosPersona.getEdad());
-                ventana2.putExtra("Pcorreo",datosPersona.getCorreo());
-                startActivity(ventana2);
+                Intent datos = new Intent(getApplicationContext(),MainActivityResultado.class);
+                datos.putExtra("Putnombre",datosPersona.getNombre());
+                datos.putExtra("Putapellido",datosPersona.getApellido());
+                datos.putExtra("Putedad",datosPersona.getEdad());
+                datos.putExtra("Putcorreo",datosPersona.getCorreo());
+                startActivity(datos);
 
             }
         });

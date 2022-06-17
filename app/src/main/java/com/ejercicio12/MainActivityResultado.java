@@ -12,17 +12,17 @@ TextView nombre,apellido,edad,correo;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_resultado);
 
-        nombre=(TextView) nombre.findViewById(R.id.datonombre);
-        apellido=(TextView) apellido.findViewById(R.id.datoapellido);
-        edad=(TextView) edad.findViewById(R.id.datoedad);
-        correo=(TextView) correo.findViewById(R.id.datocorreo);
+        nombre=(TextView)  findViewById(R.id.datonombre);
+        apellido=(TextView) findViewById(R.id.datoapellido);
+        edad=(TextView)  findViewById(R.id.datoedad);
+        correo=(TextView)  findViewById(R.id.datocorreo);
 
-        nombre.setText(getIntent().getStringExtra("Pnombre"));
-        apellido.setText(getIntent().getStringExtra("Papellido"));
-        edad.setText(getIntent().getStringExtra("Pedad"));
-        correo.setText(getIntent().getStringExtra("Pcorreo"));
+        nombre.setText(getIntent().getStringExtra("Putnombre"));
+        apellido.setText(getIntent().getStringExtra("Putapellido"));
+        edad.setText(getIntent().getStringExtra("Putedad"));
+        correo.setText(getIntent().getStringExtra("Putcorreo"));
     }
-    private Intent getIntent(){
 
-    }
+
+
 }
